@@ -2,12 +2,12 @@
 
 Summary:	WWW::Mechanize::Shell - An interactive shell for WWW::Mechanize
 Name:		perl-%{module}
-Version:	0.42
+Version:	0.43
 Release: %mkrel 1
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
-Source0:	%{module}-%{version}.tar.bz2
+Source0:	%{module}-%{version}.tar.gz
 BuildRequires:	perl-devel
 BuildRequires:	perl(WWW::Mechanize::FormFiller)
 BuildRequires:	perl(HTML::TokeParser::Simple)
