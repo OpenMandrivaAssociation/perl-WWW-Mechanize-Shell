@@ -1,9 +1,9 @@
 %define module  WWW-Mechanize-Shell
 
-Summary:	WWW::Mechanize::Shell - An interactive shell for WWW::Mechanize
 Name:		perl-%{module}
-Version:	0.44
-Release: %mkrel 1
+Version:	0.46
+Release:    %mkrel 1
+Summary:	An interactive shell for WWW::Mechanize
 License:	GPL or Artistic
 Group:		Development/Perl
 URL:		http://search.cpan.org/dist/%{module}
@@ -50,10 +50,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %doc Changes README
 %{perl_vendorlib}/WWW/Mechanize/Shell.pm
-%{perl_vendorlib}/HTML/*.pm
-%{perl_vendorlib}/HTML/Display/*.pm
-%{perl_vendorlib}/HTML/Display/OSX/*.pm
-%{perl_vendorlib}/HTML/Display/Win32/*.pm
 %{_mandir}/*/*
 
 
