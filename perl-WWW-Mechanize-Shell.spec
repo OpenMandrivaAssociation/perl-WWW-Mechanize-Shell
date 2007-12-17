@@ -18,7 +18,6 @@ BuildRequires:	perl(File::Modified)
 BuildRequires:	perl(Pod::Constants)
 BuildRequires:	perl(Test::Inline)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 This module implements a www-like shell above WWW::Mechanize
