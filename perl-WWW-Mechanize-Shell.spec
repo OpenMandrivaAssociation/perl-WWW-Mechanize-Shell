@@ -2,7 +2,7 @@
 
 Name:		perl-%{module}
 Version:	0.46
-Release:    %mkrel 4
+Release:    %mkrel 5
 Summary:	An interactive shell for WWW::Mechanize
 License:	GPL or Artistic
 Group:		Development/Perl
