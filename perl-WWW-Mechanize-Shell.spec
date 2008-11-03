@@ -1,8 +1,8 @@
 %define module  WWW-Mechanize-Shell
 
 Name:		perl-%{module}
-Version:	0.46
-Release:    %mkrel 5
+Version:	0.47
+Release:    %mkrel 1
 Summary:	An interactive shell for WWW::Mechanize
 License:	GPL or Artistic
 Group:		Development/Perl
