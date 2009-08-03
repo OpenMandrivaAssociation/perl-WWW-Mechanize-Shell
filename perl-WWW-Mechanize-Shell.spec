@@ -1,24 +1,26 @@
-%define module  WWW-Mechanize-Shell
+%define upstream_name    WWW-Mechanize-Shell
+%define upstream_version 0.48
 
-Name:		perl-%{module}
-Version:	0.48
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
 Release:    %mkrel 1
+
 Summary:	An interactive shell for WWW::Mechanize
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-URL:		http://search.cpan.org/dist/%{module}
-Source0:	%{module}-%{version}.tar.gz
-BuildRequires:	perl-devel
-BuildRequires:	perl(WWW::Mechanize::FormFiller)
-BuildRequires:	perl(HTML::TokeParser::Simple)
-BuildRequires:	perl(Term::Shell)
-BuildRequires:	perl(Hook::LexWrap)
-BuildRequires:	perl(Test::Without::Module)
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.gz
+
 BuildRequires:	perl(File::Modified)
+BuildRequires:	perl(Hook::LexWrap)
+BuildRequires:	perl(HTML::TokeParser::Simple)
 BuildRequires:	perl(Pod::Constants)
+BuildRequires:	perl(Term::Shell)
 BuildRequires:	perl(Test::Inline)
+BuildRequires:	perl(Test::Without::Module)
+BuildRequires:	perl(WWW::Mechanize::FormFiller)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module implements a www-like shell above WWW::Mechanize
@@ -27,7 +29,7 @@ the recorded session. Its main use is as an interactive starting point
 for automating a session through WWW::Mechanize.
 
 %prep
-%setup -q -n %{module}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 # pod2test is gone in perl-Test-Inline
 perl -pi -e "s|pod2test|/bin/true|g" Makefile.PL
@@ -51,5 +53,3 @@ rm -rf %{buildroot}
 %doc Changes README
 %{perl_vendorlib}/WWW/Mechanize/Shell.pm
 %{_mandir}/*/*
-
-
