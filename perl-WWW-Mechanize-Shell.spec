@@ -1,5 +1,5 @@
 %define upstream_name    WWW-Mechanize-Shell
-%define upstream_version 0.48
+%define upstream_version 0.50
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
