@@ -1,15 +1,15 @@
 %define upstream_name    WWW-Mechanize-Shell
-%define upstream_version 0.52
+%define upstream_version 0.53
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Release:	1
 
 Summary:	An interactive shell for WWW::Mechanize
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/WWW/WWW-Mechanize-Shell-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(File::Modified)
@@ -121,4 +121,5 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Sat Jul 16 2005 Oden Eriksson <oeriksson@mandriva.com> 0.34-1mdk
 - initial Mandriva package
+
 
