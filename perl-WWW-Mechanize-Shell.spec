@@ -8,7 +8,7 @@ Release:	3
 Summary:	An interactive shell for WWW::Mechanize
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	http://www.cpan.org/modules/by-module/WWW/WWW-Mechanize-Shell-%{upstream_version}.tar.gz
 
 BuildRequires:	perl-devel
