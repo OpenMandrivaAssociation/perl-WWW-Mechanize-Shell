@@ -1,15 +1,15 @@
 %define upstream_name    WWW-Mechanize-Shell
-%define upstream_version 0.53
+%define upstream_version 0.62
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	3
+Version:	%{upstream_version}
+Release:	1
 
 Summary:	An interactive shell for WWW::Mechanize
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/WWW/WWW-Mechanize-Shell-%{upstream_version}.tar.gz
+Url:		https://github.com/Corion/WWW-Mechanize-Shell
+Source0:	https://cpan.metacpan.org/authors/id/C/CO/CORION/WWW-Mechanize-Shell-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
