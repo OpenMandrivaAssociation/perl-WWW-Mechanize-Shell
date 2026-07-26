@@ -1,15 +1,13 @@
 %define upstream_name    WWW-Mechanize-Shell
-%define upstream_version 0.62
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	1
+Version:	0.62
+Release:	2
 
 Summary:	An interactive shell for WWW::Mechanize
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://github.com/Corion/WWW-Mechanize-Shell
-Source0:	https://cpan.metacpan.org/authors/id/C/CO/CORION/WWW-Mechanize-Shell-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/C/CO/CORION/WWW-Mechanize-Shell-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -30,7 +28,7 @@ the recorded session. Its main use is as an interactive starting point
 for automating a session through WWW::Mechanize.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 # pod2test is gone in perl-Test-Inline
 perl -pi -e "s|pod2test|/bin/true|g" Makefile.PL
@@ -63,9 +61,7 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 * Mon Aug 03 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.480.0-1mdv2010.0
 + Revision: 408100
-- rebuild using %%perl_convert_version
-
-* Mon Nov 10 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.48-1mdv2009.1
+- rebuild using %0.62 Mon Nov 10 2008 Guillaume Rousse <guillomovitch@mandriva.org> 0.48-1mdv2009.1
 + Revision: 301685
 - update to new version 0.48
 
